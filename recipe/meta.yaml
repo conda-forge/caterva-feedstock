@@ -8,9 +8,9 @@ package:
 source:
   url: https://github.com/Blosc/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: e323bf585218b9e4566bd7ec0de3fd23f367434713969727beffb49391c289b0
-  patches:
-    # Patches that must be consolidated in upstream
-    - caterva.patch
+#   patches:
+#     # Patches that must be consolidated in upstream
+#     - caterva.patch
 
 
 build:
