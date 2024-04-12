@@ -14,7 +14,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('caterva') }}
   # TODO: Remove once there is a stable 2.x release of c-blosc2
@@ -26,6 +26,7 @@ requirements:
     - cmake
     - make  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - c-blosc2
   run:
