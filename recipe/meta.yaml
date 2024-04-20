@@ -1,17 +1,15 @@
-{% set name = "caterva" %}
 {% set version = "0.3.3" %}
 
 package:
-  name: {{ name }}
+  name: caterva
   version: {{ version }}
 
 source:
-  url: https://github.com/Blosc/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/Blosc/caterva/archive/v{{ version }}.tar.gz
   sha256: 916387022b1bfe12268eb8362f631dc0da289b1470d941b7c2ff163172f2eb1f
   patches:
     # Patches that must be consolidated in upstream
     - caterva.patch
-
 
 build:
   number: 1
@@ -32,14 +30,14 @@ requirements:
 
 test:
   commands:
-    - test -e $PREFIX/include/{{ name }}.h                   # [unix]
-    - test -e $PREFIX/lib/lib{{ name }}${SHLIB_EXT}          # [unix]
-    - if not exist %LIBRARY_INC%\{{ name }}.h exit 1         # [win]
-    - if not exist %LIBRARY_BIN%\{{ name }}.dll exit 1       # [win]
-    - if not exist %LIBRARY_LIB%\lib{{ name }}.lib exit 1    # [win]
+    - test -e $PREFIX/include/caterva.h                   # [unix]
+    - test -e $PREFIX/lib/libcaterva${SHLIB_EXT}          # [unix]
+    - if not exist %LIBRARY_INC%\caterva.h exit 1         # [win]
+    - if not exist %LIBRARY_BIN%\caterva.dll exit 1       # [win]
+    - if not exist %LIBRARY_LIB%\libcaterva.lib exit 1    # [win]
 
 about:
-  home: https://github.com/Blosc/{{ name }}
+  home: https://github.com/Blosc/caterva
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
