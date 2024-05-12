@@ -5,7 +5,7 @@ Home: https://github.com/Blosc/caterva
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A multidimensional data container on top of Blosc2
 

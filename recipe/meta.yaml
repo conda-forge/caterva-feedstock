@@ -1,5 +1,5 @@
 {% set name = "caterva" %}
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/Blosc/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 916387022b1bfe12268eb8362f631dc0da289b1470d941b7c2ff163172f2eb1f
-  patches:
-    # Patches that must be consolidated in upstream
-    - caterva.patch
+  sha256: e323bf585218b9e4566bd7ec0de3fd23f367434713969727beffb49391c289b0
+#   patches:
+#     # Patches that must be consolidated in upstream
+#     - caterva.patch
 
 
 build:
@@ -44,10 +44,10 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A multidimensional data container on top of Blosc2'
+  summary: A multidimensional data container on top of Blosc2
 
   description: |
-      Caterva is a C library for handling multi-dimensional, compressed datasets in an easy and convenient manner. It implements a thin metalayer on top of C-Blosc2 for specifying not only the dimensionality of a dataset, but also the dimensionality of the chunks inside the dataset. In addition, Caterva adds machinery for retrieving arbitrary multi-dimensional slices (aka hyper-slices) out of the multi-dimensional containers in the most efficient way. Hence, Caterva brings the convenience of multi-dimensional and compressed containers to your application very easily.
+    Caterva is a C library for handling multi-dimensional, compressed datasets in an easy and convenient manner. It implements a thin metalayer on top of C-Blosc2 for specifying not only the dimensionality of a dataset, but also the dimensionality of the chunks inside the dataset. In addition, Caterva adds machinery for retrieving arbitrary multi-dimensional slices (aka hyper-slices) out of the multi-dimensional containers in the most efficient way. Hence, Caterva brings the convenience of multi-dimensional and compressed containers to your application very easily.
 
 extra:
   recipe-maintainers:
